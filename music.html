@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Pure CSS Hamburger fold-out menu</title>
+    <link rel="stylesheet" href="./style.css">
+
+      <style>
+#m{
+  width: 100%; 
+  max-width: 500px;
+}
+.flex-container {
+    display: flex;
+  }
+.flex-container > div{
+  width: 100%;
+  max-width: 510px;
+}
+#cont{
+  background-color: rgb(167, 19, 19);
+  border-radius: 30px;
+  height: 65px;
+  align-content: center;
+  box-shadow: 5px 5px 5px 5px grey;
+  margin-bottom: 20px;
+}
+#song{
+color: rgb(130, 109, 250);
+font-size: 25px;
+align-content: center;
+margin-bottom: 20px;
+}
+
+  </style>
+
+  </head>
+    
+  <body>
+
+<nav role="navigation">
+  <div id="menuToggle">
+    <input type="checkbox" id="menuCheckbox" />
+    
+    <span></span>
+    <span></span>
+    <span></span>
+    <ul id="menu">
+      <li><a href="sostav.html"><b>Состав</a></li>
+      <li><a href="photo.html">Фото</a></li>
+      <li><a href="albom.html">Альбом</a></li>
+      <li><a href="texta.html">Текста</a></li>
+      <li><a href="#">Музыка</a></li>
+      <li><a href="video.html">Видео</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="kontakt.html">Контакты</b></a></li>
+    </ul>
+  </div>
+</nav>
+<div class="dv">
+  <h2>🎵 Музыкальный плеер</h2>
+<div class="flex-container">
+  <div id="song">
+    <br>Maneskin-ZITTI E BUONI
+  </div>
+  <div id="cont">
+    <audio id="m" controls>
+        <source src="music/Test.mp3" type="audio/mpeg">
+        <source src="music.ogg" type="audio/ogg">
+        Ваш браузер не поддерживает воспроизведение музыки.
+    </audio>
+  </div>
+</div>
+<div class="flex-container">
+  <div id="song">
+    <br>Pantera-Floods
+  </div>
+  <div id="cont">
+    <audio id="m" controls>
+        <source src="music/13.mp3" type="audio/mpeg">
+        <source src="music.ogg" type="audio/ogg">
+        Ваш браузер не поддерживает воспроизведение музыки.
+    </audio>
+    
+  </div>
+</div>
+<div class="flex-container">
+  <div id="song">
+    <br>НЕРВЫ-сбежим
+  </div>
+  <div id="cont">
+    <audio id="m" controls>
+        <source src="music/123.mp3" type="audio/mpeg">
+        <source src="music.ogg" type="audio/ogg">
+        Ваш браузер не поддерживает воспроизведение музыки.
+    </audio>
+  </div>
+</div>
+</div>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>

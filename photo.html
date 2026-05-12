@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Pure CSS Hamburger fold-out menu</title>
+    <link rel="stylesheet" href="./style.css">
+<style>
+
+        /* Стили для модального окна */
+        .modal {
+            display: none;
+            /* По умолчанию скрыто */
+            position: fixed;
+            /* Фиксированное положение */
+            z-index: 1;
+            /* Верхний уровень */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Полная ширина */
+            height: 100%;
+            /* Полная высота */
+            overflow: auto;
+            /* Включить прокрутку, если необходимо */
+            background-color: rgba(0, 0, 0, 0.9);
+            /* Черный цвет с прозрачностью */
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            height: 20%;
+            max-width: 700px;
+        }
+
+        .modal-content img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Стили для изображения */
+        img {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            width: 100%;
+        }
+
+        img:hover {
+            opacity: 0.7;
+        }
+
+        .images {
+            width: 100%;
+        }
+
+    </style>
+  </head>
+    
+  <body>
+
+<nav role="navigation">
+  <div id="menuToggle">
+    <input type="checkbox" id="menuCheckbox" />
+    
+    <span></span>
+    <span></span>
+    <span></span>
+    <ul id="menu">
+      <li><a href="sostav.html"><b>Состав</a></li>
+      <li><a href="#">Фото</a></li>
+      <li><a href="albom.html">Альбом</a></li>
+      <li><a href="texta.html">Текста</a></li>
+      <li><a href="music.html">Музыка</a></li>
+      <li><a href="video.html">Видео</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="kontakt.html">Контакты</b></a></li>
+    </ul>
+  </div>
+</nav>
+<div>
+
+    <!-- Изображения нужно добавлять в этот блок -->
+     <p> .</p>
+     <p> .</p>
+    <div class="images">
+      <table width="80%" align="center">
+        <tr>
+        <td colspan="2" width="50%"><img src="photo/8th march 1.webp"  alt="Image" onclick="displayModal(this);"></td>
+        <td width="21%"><img src="photo/new year 2.webp"  alt="Image" onclick="displayModal(this);"></td>
+        <td rowspan="2"><img src="photo/new year 1.webp"  alt="Image" onclick="displayModal(this);"></td>
+        </tr>
+        <tr>
+        <td width="25.5%"><img src="photo/new year 4.webp"  alt="Image" onclick="displayModal(this);"></td>
+        <td colspan="2"><img src="photo/new year 3.webp"  alt="Image" onclick="displayModal(this);"></td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Модальное окно -->
+    <div id="modal" class="modal" onclick="hideModal();">
+      <span class="close">&times;</span>
+      <div class="modal-content">
+        <img id="modal-image">
+      </div>
+    </div>
+</div>
+    <script  src="./script.js"></script>
+    <script>
+        // Получаем элементы модального окна и изображения
+        const modal = document.getElementById("modal");
+        const modalImage = document.getElementById("modal-image");
+
+        // Отображаем модальное окно и устанавливаем источник изображения
+        function displayModal(img)
+        {
+            modal.style.display = "block";
+            modalImage.src = img.src;
+        }
+
+        // Скрываем содержимое модального окна, если пользователь кликнул вне его
+        function hideModal()
+        {  
+            if (event.target
+ == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+  </body>
+  
+</html>
